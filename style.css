@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 2vh;
+}
+
+:root {
+    --BG-Color : rgb(210, 208, 208);
+    --Font-Para : rgb(43, 37, 37);
+    --Font-Heading : rgb(111, 0, 255);
+    --Font-Heading_2 : rgb(0, 119, 255);
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+}
+
+/*Header Styles*/
+
+header {
+    background-color: rgb(111, 0, 255);
+    height: 10vh;
+    width: 100%;
+    color: var(--Font-Heading_2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+header #title {
+    text-shadow: 0 0 3px black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 30%;
+    background: rgba(255, 255, 255, 0.186);
+    border-radius: 10px;
+    border: 2px solid blueviolet;
+    margin-left: 10px;
+
+}
+
+header #title span {
+    font-size: 2.8rem;
+}
+
+header nav {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav ul li {
+    font-size: 1.5rem;
+    font-weight: 200;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    color: white;
+    list-style: none;
+    text-transform: uppercase;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+header nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.594);
+    color: #222222;
+    transition: all 0.5s;
+}
+
+
+/*Main Styles*/
+
+/*Intro Section*/
+
+#intro {
+    height: 500px;
+    width: 100vw;
+    background: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#intro .introContent {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro .introContent .TextContent {
+    height: 80%;
+    width: 90%;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur(3px);
+}
+
+#intro .introContent .TextContent p {
+    /* background-color: red; */
+    height: 70%;
+    width: 100%;
+    padding: 5% 5%;
+}
+
+#intro .introContent .TextContent p span:nth-child(1){
+    font-size: 6rem;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+#intro .introContent .TextContent p span:nth-child(2){
+    font-size: 4rem;
+    color: rgb(46, 46, 240);
+}
+
+#intro .introContent .TextContent p span:nth-child(3){
+    font-size: 4rem;
+    display: block;
+    margin: 10px 0;
+    color: blue;
+}
+
+#intro .introContent .TextContent p span:nth-child(4){
+    font-size: 2.2rem;
+    font-weight: 400;
+    display: block;
+}
+
+#intro .introContent .TextContent p span:nth-child(5){
+    font-size: 1.2rem;
+    display: block;
+}
+
+#intro .introContent .TextContent #btns {
+    /* background-color: red; */
+    height: 30%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#intro .introContent .TextContent #btns span {
+    font-size: 3rem;
+    color: #22222290;
+}
+
+#intro .introContent .TextContent #btns button {
+    height: 50%;
+    width: 30%;
+    border-radius: 84% 16% 73% 27% / 42% 75% 25% 58% ;
+    border: none;
+    background-color: rgb(255, 149, 0);
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+#intro .introContent .TextContent #btns button:hover {
+    opacity: 0.8;
+}
+
+#intro .img {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+#icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+}
+
+#icons img {
+    height: 10%;
+    position: absolute;
+}
+
+#icons img:nth-child(1){
+   top: 35%;
+   left: 10%;
+}
+
+#icons img:nth-child(2){
+    left: 10%;
+    top: 15%;
+}
+
+#icons img:nth-child(3){
+    left: 30%;
+    top: 5%;
+}
+
+#icons img:nth-child(4){
+    right: 30%;
+    top: 5%;
+}
+
+#icons img:nth-child(5){
+    right: 10%;
+    top: 15%;
+}
+
+#icons img:nth-child(6){
+    top: 35%;
+    right: 10%;
+}
+
+
+
+
