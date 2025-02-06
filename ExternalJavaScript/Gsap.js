@@ -56,4 +56,31 @@ document.addEventListener("DOMContentLoaded", () => {
         repeat: -1,
         yoyo: true
     }, "-=1.5");
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from(".Cont-01", {
+        x: -500,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".Cont-01",
+            start: "top 60%",
+            end: "top 30%",
+            scrub: true,
+            markers: true
+        }
+    })
+
+    gsap.from(".Cont-02", {
+        x: 500,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".Cont-02",
+            start: "top 60%",
+            end: "top 30%",
+            scrub: true,
+            markers: true
+        }
+    })
+
 })
