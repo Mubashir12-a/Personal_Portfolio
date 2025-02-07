@@ -66,8 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             trigger: ".Cont-01",
             start: "top 60%",
             end: "top 30%",
-            scrub: true,
-            markers: true
+            scrub: true
         }
     })
 
@@ -78,8 +77,18 @@ document.addEventListener("DOMContentLoaded", () => {
             trigger: ".Cont-02",
             start: "top 60%",
             end: "top 30%",
-            scrub: true,
-            markers: true
+            scrub: true
+        }
+    })
+
+    gsap.from(".Cont-03", {
+        x: -500,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".Cont-03",
+            start: "top 60%",
+            end: "top 30%",
+            scrub: true
         }
     })
 

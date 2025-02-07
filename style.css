@@ -22,6 +22,16 @@ body {
     height: auto;
 }
 
+::-webkit-scrollbar {
+    background-color: var(--BG-Color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--BG-Color), black);
+    border-radius: 10px;
+}
+
+
 /*Header Styles*/
 
 header {
@@ -245,7 +255,7 @@ header nav ul li:hover {
     height: 500px;
     width: 100vw;
     background-color: var(--BG-Color);
-    border-top: 3px solid rgb(13, 7, 182);
+    border-top: 3px solid white;
 }
 
 #about-1 h2 {
@@ -300,7 +310,7 @@ header nav ul li:hover {
 }
 
 .AboutContent div p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     /* background-color: blue; */
     height: 80%;
     width: 60%;
@@ -318,8 +328,10 @@ header nav ul li:hover {
 }
 
 .AboutContent div p span {
-    font-size: 2.2rem;
-    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: black;
 }
 
 .AboutContent div img {
@@ -327,4 +339,66 @@ header nav ul li:hover {
 }
 
 
+/*Skills section styles*/
 
+#skills {
+    height: 500px;
+    width: 100vw;
+    background: linear-gradient(to bottom, var(--BG-Color), rgb(57, 3, 91));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills .container {
+    height: 90%;
+    width: 90%;
+    position: relative;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#skills .container .block {
+    border: 2px solid black;
+    height: 40%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    background: conic-gradient(cyan 0% 0%, transparent 0% 100%);
+}
+
+#skills .container .block span {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+    background: rgb(87, 0, 163);
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+#skills .container .block:nth-child(3) span{
+    font-size: 1.8rem;
+}
+
+#skills .container .block span::before {
+    content: "";
+    position: absolute;
+    top: -7.5%;
+    left: -7.5%;
+    height: 115%;
+    width: 115%;
+    border-radius: 50%;
+}
