@@ -342,7 +342,7 @@ header nav ul li:hover {
 /*Skills section styles*/
 
 #skills {
-    height: 500px;
+    height: 600px;
     width: 100vw;
     background: linear-gradient(to bottom, var(--BG-Color), rgb(57, 3, 91));
     display: flex;
@@ -351,14 +351,14 @@ header nav ul li:hover {
 }
 
 #skills .container {
-    height: 90%;
+    height: 75%;
     width: 90%;
     position: relative;
     background-color: transparent;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-content: space-between;
 }
 
 #skills .container .block {
@@ -389,10 +389,6 @@ header nav ul li:hover {
     color: white;
 }
 
-#skills .container .block:nth-child(3) span{
-    font-size: 1.8rem;
-}
-
 #skills .container .block span::before {
     content: "";
     position: absolute;
@@ -401,4 +397,61 @@ header nav ul li:hover {
     height: 115%;
     width: 115%;
     border-radius: 50%;
+}
+
+#skills .container .block span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    height: 30%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.287);
+    backdrop-filter: blur(5px);
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 1.9rem;
+}
+
+#skills .container .block:nth-child(1) span::after {
+    content: "HTML";
+}
+#skills .container .block:nth-child(2) span::after {
+    content: "CSS";
+}
+#skills .container .block:nth-child(3) span::after {
+    content: "BootStrap";
+}
+#skills .container .block:nth-child(4) span::after {
+    content: "SASS";
+}
+#skills .container .block:nth-child(5) span::after {
+    content: "JS";
+}
+#skills .container .block:nth-child(6) span::after {
+    content: "MySQL";
+}
+#skills .container .block:nth-child(7) span::after {
+    content: "PHP";
+}
+#skills .container .block:nth-child(8) span::after {
+    content: "JAVA";
+}
+#skills .container .block:nth-child(9) span::after {
+    content: "C";
+}
+#skills .container .block:nth-child(10) span::after {
+    content: "Python";
+}
+#skills .container .block:nth-child(11) span::after {
+    content: "C++";
+}
+#skills .container .block:nth-child(12) span::after {
+    content: "React";
 }

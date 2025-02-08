@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.from(".container", {
         onStart : () => {
             Object.entries(ObjLang).forEach(([key, value]) => {
+                SetContentPer(value);
                 SetSkillArc(i, value);
                 i++;
             })

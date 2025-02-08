@@ -11,7 +11,7 @@ let ObjLang = {
     "JAVA" : 40,
     "C" : 30,
     "Python" : 20,
-    "Cpp" : 20,
+    "C++" : 20,
     "React" : 10
 }
 
@@ -28,4 +28,8 @@ function SetSkillArc(i, per){
             clearInterval(Interval);
         }
     }, 20)
+}
+
+function SetContentPer(ValuePer){
+    spanArr[i].textContent = ValuePer + "%";
 }
