@@ -92,4 +92,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+    gsap.from(".container", {
+        onStart : () => {
+            Object.entries(ObjLang).forEach(([key, value]) => {
+                SetSkillArc(i, value);
+                i++;
+            })
+        },
+        scrollTrigger : {
+            trigger: ".container",
+            start: "top 60%",
+            end: "top 30%",
+            scrub: true
+        }
+    })
+
 })

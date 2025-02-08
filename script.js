@@ -19,10 +19,13 @@ let Keys = Object.keys(ObjLang);
 let i = 0;
 
 function SetSkillArc(i, per){
-    spanArr[i].parentNode.style.background = `conic-gradient(cyan 0% ${per}%, transparent ${per}% 100%)`;
+    let j = 1;
+    let Interval = setInterval(() => {
+        if(j <= per){
+            spanArr[i].parentNode.style.background = `conic-gradient(cyan 0% ${j}%, transparent ${j}% 100%)`;
+            j++;
+        } else{
+            clearInterval(Interval);
+        }
+    }, 20)
 }
-
-Object.entries(ObjLang).forEach(([key, value]) => {
-    SetSkillArc(i, value);
-    i++;
-})
