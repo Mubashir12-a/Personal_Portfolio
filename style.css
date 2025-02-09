@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 2vh;
+    text-decoration: none;
 }
 
 :root {
@@ -15,6 +16,7 @@
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+    scroll-padding-top: 50px;
 }
 
 body {
@@ -29,6 +31,7 @@ body {
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, var(--BG-Color), black);
     border-radius: 10px;
+    border-left: 1px solid cyan;
 }
 
 
@@ -43,6 +46,11 @@ header {
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 header #title {
@@ -179,7 +187,7 @@ header nav ul li:hover {
     color: #22222290;
 }
 
-#intro .introContent .TextContent #btns button {
+#intro .introContent .TextContent #btns a {
     height: 50%;
     width: 30%;
     border-radius: 84% 16% 73% 27% / 42% 75% 25% 58% ;
@@ -188,9 +196,13 @@ header nav ul li:hover {
     font-size: 2.2rem;
     letter-spacing: 3px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
 }
 
-#intro .introContent .TextContent #btns button:hover {
+#intro .introContent .TextContent #btns a:hover {
     opacity: 0.8;
 }
 
@@ -342,12 +354,43 @@ header nav ul li:hover {
 /*Skills section styles*/
 
 #skills {
-    height: 600px;
+    height: 700px;
     width: 100vw;
     background: linear-gradient(to bottom, var(--BG-Color), rgb(57, 3, 91));
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+#skills h2 {
+    background-color: rgba(255, 255, 255, 0.332);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 1% 4%;
+    font-size: 2rem;
+    position: relative;
+    border: 2px solid white;
+}
+
+#skills h2::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -200%;
+    background: white;
+    height: 2px;
+    width: 200%;
+}
+
+#skills h2::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: -200%;
+    background: white;
+    height: 2px;
+    width: 200%;
 }
 
 #skills .container {
@@ -358,12 +401,12 @@ header nav ul li:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-content: space-between;
+    align-content: space-around;
 }
 
 #skills .container .block {
     border: 2px solid black;
-    height: 40%;
+    height: 35%;
     width: 15%;
     display: flex;
     justify-content: center;
@@ -402,7 +445,7 @@ header nav ul li:hover {
 #skills .container .block span::after {
     content: "";
     position: absolute;
-    top: 100%;
+    top: 101%;
     left: 0%;
     height: 30%;
     width: 100%;
@@ -454,4 +497,167 @@ header nav ul li:hover {
 }
 #skills .container .block:nth-child(12) span::after {
     content: "React";
+}
+
+
+
+/*projects section styles*/
+
+#projects-Sec-1 {
+    height: 500px;
+    width: 100vw;
+    background-color: rgb(57, 3, 91);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#projects-Sec-1 h2 {
+    height: 50px;
+    width: 30%;
+    background-color: rgb(99, 7, 105);
+    border-radius: 10px;
+    border: 2px solid white;
+    text-align: center;
+    align-content: center;
+    color: white;
+    backdrop-filter: blur(5px);
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+#projects-Sec-1 .container {
+    height: 70%;
+    width: 95%;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.152);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+#projects-Sec-2 {
+    height: 350px;
+    width: 100vw;
+    background-color: rgb(57, 3, 91);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+#projects-Sec-2 h2 {
+    grid-column: 1/ -1;
+    background-color: rgba(178, 18, 199, 0.406);
+    width: 50%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: 2px solid red;
+    color: white;
+    letter-spacing: 3px;
+}
+
+#projects-Sec-2 img {
+    height: 240px;
+    margin: auto;
+}
+
+#projects-Sec-2 .content {
+    height: 220px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.209);
+    border-radius: 10px;
+    margin: auto;
+    margin-left: 0;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#projects-Sec-2 .content .border {
+    position: absolute;
+    background-color: white;
+}
+
+#projects-Sec-2 .content .border:nth-child(1) {
+    height: 3px;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+#projects-Sec-2 .content .border:nth-child(2) {
+    height: 3px;
+    width: 60%;
+    left: 0;
+    bottom: 0;
+}
+
+#projects-Sec-2 .content .border:nth-child(3) {
+    height: 100%;
+    width: 3px;
+    left: 0;
+    top: 0;
+}
+
+#projects-Sec-2 .content .border:nth-child(4) {
+    height: 80%;
+    width: 3px;
+    right: 0;
+    top: 0;
+}
+
+#projects-Sec-2 .content .bttnSpace {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 30%;
+    width: 50%;
+    border-radius: 10px;
+    background-color: rgb(57, 3, 91);
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+}
+
+#projects-Sec-2 .content p {
+    font-size: 1.8rem;
+    color: black;
+    justify-content: center;
+}
+
+#projects-Sec-2 .content .bttnSpace button {
+    height: 85%;
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.209);
+    backdrop-filter: blur(5px);
+    margin: 2.5% 2.5%;
+    border-radius: 10px;
+    border: none;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    color: #222222;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.5s;
+
+}
+
+#projects-Sec-2 .content .bttnSpace button:hover {
+    background-color: rgba(255, 255, 255, 0.457);
+    color: black;
+    letter-spacing: 5px;
+    transition: all 0.5s;
 }

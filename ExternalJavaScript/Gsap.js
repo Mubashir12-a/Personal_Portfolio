@@ -102,10 +102,59 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         scrollTrigger : {
             trigger: ".container",
+            start: "top 45%",
+            end: "top 30%",
+            scrub: true
+        }
+    })
+
+    gsap.from("#skills h2", {
+        scale: 0,
+        duration: 1,
+        opacity: 0,
+        scrollTrigger : {
+            trigger: "#skills h2",
             start: "top 60%",
             end: "top 30%",
             scrub: true
         }
     })
+
+    gsap.from("#projects-Sec-2 h2", {
+        y: -200,
+        opacity: 0,
+        scrollTrigger : {
+            trigger: "#projects-Sec-2",
+            start: "top 60%",
+            end: "top 40%",
+            scrub: true
+        }
+    })
+
+    gsap.from("#projects-Sec-2 .content", {
+        x: -100,
+        y: -200,
+        opacity: 0,
+        scrollTrigger : {
+            trigger: "#projects-Sec-2",
+            start: "top 60%",
+            end: "top 40%",
+            scrub: true
+        }
+    })
+
+    gsap.from("#projects-Sec-2 img", {
+        x: 100,
+        y: -200,
+        opacity: 0,
+        scrollTrigger : {
+            trigger: "#projects-Sec-2",
+            start: "top 60%",
+            end: "top 40%",
+            scrub: true
+        }
+    })
+
+
 
 })
