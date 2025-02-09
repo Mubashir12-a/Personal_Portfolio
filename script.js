@@ -23,11 +23,12 @@ function SetSkillArc(i, per){
     let Interval = setInterval(() => {
         if(j <= per){
             spanArr[i].parentNode.style.background = `conic-gradient(cyan 0% ${j}%, transparent ${j}% 100%)`;
+            spanArr[i].textContent = j + "%";
             j++;
         } else{
             clearInterval(Interval);
         }
-    }, 20)
+    }, 50)
 }
 
 function SetContentPer(ValuePer){
