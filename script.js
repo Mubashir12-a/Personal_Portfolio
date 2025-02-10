@@ -11,7 +11,7 @@ let ObjLang = {
     "JAVA" : 40,
     "C" : 30,
     "Python" : 20,
-    "C++" : 20,
+    "GSAP" : 20,
     "React" : 10
 }
 

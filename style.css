@@ -574,7 +574,12 @@ header nav ul li:hover {
     z-index: -1;
 }
 
-
+#projects-Sec-1 .container #Container-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px;
+}
 
 
 
