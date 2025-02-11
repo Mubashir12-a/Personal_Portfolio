@@ -62,33 +62,33 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.from(".Cont-01", {
         x: -500,
         opacity: 0,
+        duration: 2,
+        ease: "elastic.out(1, 0.3)",
         scrollTrigger: {
             trigger: ".Cont-01",
-            start: "top 60%",
-            end: "top 30%",
-            scrub: true
+            start: "top 60%"
         }
     })
 
     gsap.from(".Cont-02", {
         x: 500,
         opacity: 0,
+        duration: 2,
+        ease: "elastic.out(1, 0.3)",
         scrollTrigger: {
             trigger: ".Cont-02",
-            start: "top 60%",
-            end: "top 30%",
-            scrub: true
+            start: "top 60%"
         }
     })
 
     gsap.from(".Cont-03", {
         x: -500,
         opacity: 0,
+        duration: 2,
+        ease: "elastic.out(1, 0.3)",
         scrollTrigger: {
             trigger: ".Cont-03",
-            start: "top 60%",
-            end: "top 30%",
-            scrub: true
+            start: "top 60%"
         }
     })
 
@@ -102,21 +102,18 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         scrollTrigger : {
             trigger: ".container",
-            start: "top 45%",
-            end: "top 30%",
-            scrub: true
+            start: "top 45%"
         }
     })
 
     gsap.from("#skills h2", {
         scale: 0,
-        duration: 1,
+        duration: 3,
         opacity: 0,
+        ease: "elastic.out(2, 0.2)",
         scrollTrigger : {
             trigger: "#skills h2",
-            start: "top 60%",
-            end: "top 30%",
-            scrub: true
+            start: "top 60%"
         }
     })
 
@@ -155,6 +152,38 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+    gsap.from("#projects-Sec-1 h2", {
+        scale: 0,
+        duration: 3,
+        opacity: 0,
+        ease: "elastic.out(2, 0.2)",
+        scrollTrigger : {
+            trigger: "#projects-Sec-1 h2",
+            start: "top 60%"
+        }
+    })
+
+    gsap.from("#Container-1", {
+        x: 300,
+        duration: 1,
+        opacity: 0,
+        ease: "elastic.out(1, 0.3)",
+        scrollTrigger : {
+            trigger: "#Container-1",
+            start: "top 50%"
+        }
+    })
+
+    gsap.from("#Container-2", {
+        x: -300,
+        duration: 1,
+        opacity: 0,
+        ease: "elastic.out(1, 0.3)",
+        scrollTrigger : {
+            trigger: "#Container-2",
+            start: "top 50%"
+        }
+    })
 
 
 })
