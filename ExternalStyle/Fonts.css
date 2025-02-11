@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+
+#title span {
+    font-family: "Londrina Sketch", serif
+}
+
+nav ul a li,
+.bttnSpace button {
+    font-family: "Orbitron", serif;
+}
+
+.AboutContent h3 {
+    font-family: "Sedan SC", serif;
+}
+
+#about-1 h2,
+#btns {
+    font-family: "Space Grotesk", serif;
+    font-weight: 500;
+}
+
+.TextContent p {
+    font-family: "Dosis", serif;
+}
+
+.Cont-01 p,
+.Cont-02 p,
+.Cont-03 p {
+    font-family: "Quicksand", serif;
+}
+
+#skills h2,
+#projects-Sec-1 h2,
+#projects-Sec-2 h2 {
+    font-family: "Sedan SC", serif;
+}
+
+#skills .container {
+    font-family: "Space Grotesk", serif;
+}
+
+#Container-1 p,
+#Container-2 p,
+.content p {
+    font-family: "Sedan SC", serif;
+    font-weight: 400;
+    font-style: normal;
+}
