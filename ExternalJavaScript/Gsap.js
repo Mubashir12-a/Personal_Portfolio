@@ -42,13 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
         stagger: 0.3
     });
     
-    // Continuous rotation animation (after initial animation completes)
     tl.to("#icons img:nth-child(odd)", {
         rotate: 30,
         duration: 1.5,
         repeat: -1,
         yoyo: true
-    }, "-=1.5"); // Overlapping to make it smoother
+    }, "-=1.5"); 
     
     tl.to("#icons img:nth-child(even)", {
         rotate: -30,
@@ -95,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.from(".container", {
         onStart : () => {
             Object.entries(ObjLang).forEach(([key, value]) => {
-                SetContentPer(value);
                 SetSkillArc(i, value);
                 i++;
             })
@@ -181,9 +179,67 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "elastic.out(1, 0.3)",
         scrollTrigger : {
             trigger: "#Container-2",
-            start: "top 50%"
+            start: "top 70%"
         }
     })
 
 
+})
+
+
+let NavEl = document.getElementsByClassName("NavEl");
+
+NavEl[0].addEventListener("click", () => {
+    gsap.from(".Cont-01", {
+        x: -500,
+        opacity: 0,
+        duration: 2,
+        ease: "elastic.out(1, 0.3)"
+    })
+})
+
+
+
+NavEl[1].addEventListener("click", () => {
+    gsap.from("#skills h2", {
+        scale: 0,
+        duration: 3,
+        opacity: 0,
+        ease: "elastic.out(2, 0.2)"
+    })
+
+    i = 0;
+
+    gsap.from(".container", {
+        onStart : () => {
+            Object.entries(ObjLang).forEach(([key, value]) => {
+                SetSkillArc(i, value);
+                i++;
+            })
+        }
+    })
+})
+
+
+NavEl[2].addEventListener("click", () => {
+    gsap.from("#Container-1", {
+        x: 1200,
+        duration: 3,
+        opacity: 0,
+        ease: "elastic.out(1, 0.3)"
+    })
+
+    gsap.from("#Container-2", {
+        x: -1200,
+        duration: 3,
+        opacity: 0,
+        ease: "elastic.out(1, 0.3)"
+    })
+
+    gsap.from("#projects-Sec-1 h2", {
+        scale: 0,
+        duration: 3,
+        opacity: 0,
+        ease: "elastic.out(2, 0.2)"
+    })
 })

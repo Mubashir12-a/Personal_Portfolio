@@ -31,6 +31,3 @@ function SetSkillArc(i, per){
     }, 50)
 }
 
-function SetContentPer(ValuePer){
-    spanArr[i].textContent = ValuePer + "%";
-}
