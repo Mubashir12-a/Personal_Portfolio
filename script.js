@@ -1,3 +1,12 @@
+window.addEventListener("load", () => {
+    window.history.scrollRestoration = "manual";
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 10);
+});
+
+
+
 let spanArr = document.querySelectorAll(".container .block span");
 
 let ObjLang = {
