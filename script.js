@@ -1,9 +1,6 @@
-window.addEventListener("load", () => {
-    window.history.scrollRestoration = "manual";
-    setTimeout(() => {
-        window.scrollTo(0, 0);
-    }, 10);
-});
+// window.addEventListener("load", () => {
+//     window.scrollTo(0,0);
+// });
 
 
 
