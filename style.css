@@ -29,9 +29,9 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, var(--BG-Color), black);
+    background: linear-gradient(to bottom, var(--BG-Color), red);
     border-radius: 10px;
-    border-left: 1px solid cyan;
+    border-bottom: 5px solid red;
 }
 
 
@@ -895,4 +895,69 @@ header nav ul li:hover {
 
 #message .msgContent img {
     height: 70%;
+}
+
+
+/*Footer Styles*/
+
+footer {
+    background: rgba(57, 3, 91);
+    color: white;
+    padding: 40px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1em;
+}
+
+.copyright {
+    margin-top: 30px;
+    font-size: 0.9em;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.fas {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.8);
 }

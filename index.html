@@ -30,8 +30,8 @@
                 <a href="#about-1"><li class="NavEl">About</li></a>
                 <a href="#skills"><li class="NavEl">Skills</li></a>
                 <a href="#projects-Sec-1"><li class="NavEl">Projects</li></a>
-                <a href=""><li class="NavEl">Blogs</li></a>
-                <a href=""><li class="NavEl">Contact</li></a>
+                <a href="#"><li class="NavEl">Blogs</li></a>
+                <a href="#contact"><li class="NavEl">Contact</li></a>
             </ul>
         </nav>
     </header>
@@ -187,16 +187,16 @@
         <section id="contact">
             <section id="message">
                 <h3>send message</h3>
-                <div class="msgContent">
+                <form class="msgContent">
                     <div>
                         <input type="text" name="Name" id="name" placeholder="Enter Name">
                         <textarea name="OnMsg" id="MsgText" placeholder="Enter Text"></textarea>
                         <div class="button">
-                            <button>send</button>
+                            <button id="SndMsg" type="submit">send</button>
                         </div>
                     </div>
                     <img src="Images/MsgImg.gif" alt="MsgGif">
-                </div>
+                </form>
             </section>
         </section>
 
@@ -204,11 +204,55 @@
 
     <!-- Here Goes Footer -->
     <footer>
-
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <a href="tel:+917889825292">
+                        <i class="fas fa-phone"></i>
+                        +91-7889825292
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="mailto:ma2625645@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        ma2625645@gmail.com
+                    </a>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2023 My Portfolio. All rights reserved.
+            </div>
+        </div>
     </footer>
 </body>
 <script src="script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="module" src="ExternalJavaScript/Gsap.js"></script>
+
+<script>
+    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+
+        // Form submission handler
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+
+            var name = document.getElementById("name").value;
+            var message = document.getElementById("message").value;
+
+            // Send email using EmailJS
+            var templateParams = {
+                name: name,
+                message: message
+            };
+
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+                .then(function(response) {
+                    alert("Message sent successfully!");
+                }, function(error) {
+                    alert("Error sending message: " + error);
+                });
+        });
+</script>
 </html>
