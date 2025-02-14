@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 2vh;
     text-decoration: none;
 }
 
@@ -17,6 +16,7 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     scroll-padding-top: 50px;
+    font-size: 16px;
 }
 
 body {
@@ -898,4 +898,144 @@ header nav ul li:hover {
 }
 
 
-/*Footer Styles*/
+
+/*Connect Section Responsive Done*/
+
+#connect {
+    height: auto;
+    width: 100vw;
+    background-color: rgb(57, 3, 91);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#connect #Conn-A,
+#connect #Conn-B {
+    /* background-color: red; */
+    width: 50vw;
+}
+
+#connect #Conn-A a,
+#connect #Conn-B a {
+    all: initial;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    height: 50px;
+    margin: 5px 10%;
+    background-color: rgba(255, 255, 255, 0.325);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 5px 0;
+    color: #111111;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+#connect #Conn-A a img,
+#connect #Conn-B a img {
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    margin-right: 5%;
+}
+
+
+@media (max-width: 767px){
+    #connect {
+        flex-direction: column;
+    }
+
+    #connect #Conn-A,
+    #connect #Conn-B {
+        width: 90vw;
+    }
+
+    #connect #Conn-A a,
+    #connect #Conn-B a {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    #connect #Conn-A a img,
+    #connect #Conn-B a img {
+        height: 40px;
+        width: 40px;
+        margin-right: 5%;
+    }
+}
+
+
+/*Footer Styles Responsive Done*/
+
+footer {
+    height: auto;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgb(57, 3, 91);
+    padding-top: 50px;
+}
+
+footer a {
+    all: initial;
+}
+
+footer .phone,
+footer .mail,
+footer .copyRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+footer .phone,
+footer .mail {
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+footer .phone:hover,
+footer .mail:hover {
+    transform: translateY(-5px);
+    transition: all 0.5s;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+footer .copyRight {
+    grid-column: 1/-1;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 767px){
+    footer {
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    footer .phone,
+    footer .mail {
+        font-size: 1rem;
+        grid-column: 1/-1;
+        width: 100vw;
+        margin: 5px 0;
+    }
+
+    footer .copyRight {
+    font-size:0.81rem;
+    padding: 8px 0;
+}
+}
