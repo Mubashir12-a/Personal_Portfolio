@@ -10,6 +10,8 @@
     --Font-Para : rgb(43, 37, 37);
     --Font-Heading : rgb(111, 0, 255);
     --Font-Heading_2 : rgb(0, 119, 255);
+    --Top-ThemeColor : rgb(111, 0, 255);
+    --Bottom-ThemeColor : rgb(99, 7, 105);
 }
 
 html {
@@ -35,7 +37,7 @@ body {
 }
 
 
-/*Header Styles*/
+/*Header Styles Responsive Done*/
 
 header {
     background-color: rgb(111, 0, 255);
@@ -63,11 +65,10 @@ header #title {
     border-radius: 10px;
     border: 2px solid blueviolet;
     margin-left: 10px;
-
 }
 
 header #title span {
-    font-size: 2.8rem;
+    font-size: 2rem;
 }
 
 header nav {
@@ -85,7 +86,7 @@ header nav ul {
 }
 
 header nav ul li {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 200;
     padding: 5px 10px;
     letter-spacing: 2px;
@@ -108,12 +109,41 @@ header nav ul li:hover {
 }
 
 
+@media (max-width: 767px){
+    header {
+        justify-content: space-around;
+        flex-direction: column;
+        height: 150px;
+    }
+
+    header #title {
+        width: 90%;
+    }
+
+    header nav {
+        width: 100%;
+        height: 60%;
+    }
+
+    header nav ul {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    header nav ul li {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+}
+
+
 /*Main Styles*/
 
 /*Intro Section*/
 
 #intro {
-    height: 500px;
+    height: auto;
     width: 100vw;
     background: var(--BG-Color);
     display: flex;
@@ -122,7 +152,7 @@ header nav ul li:hover {
 }
 
 #intro .introContent {
-    height: 100%;
+    height: 500px;
     width: 60%;
     display: flex;
     align-items: center;
@@ -135,11 +165,15 @@ header nav ul li:hover {
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.199);
     backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #intro .introContent .TextContent p {
     /* background-color: red; */
-    height: 70%;
+    height: 350px;
     width: 100%;
     padding: 5% 5%;
 }
@@ -175,25 +209,26 @@ header nav ul li:hover {
 
 #intro .introContent .TextContent #btns {
     /* background-color: red; */
-    height: 30%;
+    height: 50px;
     width: 90%;
+    font-size: 2rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 #intro .introContent .TextContent #btns span {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #22222290;
 }
 
 #intro .introContent .TextContent #btns a {
-    height: 50%;
-    width: 30%;
+    height: 40px;
+    width: 25%;
     border-radius: 84% 16% 73% 27% / 42% 75% 25% 58% ;
     border: none;
     background-color: rgb(255, 149, 0);
-    font-size: 2.2rem;
+    font-size: 2rem;
     letter-spacing: 3px;
     cursor: pointer;
     display: flex;
@@ -207,12 +242,16 @@ header nav ul li:hover {
 }
 
 #intro .img {
-    height: 100%;
+    height: 500px;
     width: 40%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     position: relative;
+}
+
+#intro img {
+    height: 80%;
 }
 
 #icons {
@@ -257,6 +296,62 @@ header nav ul li:hover {
 #icons img:nth-child(6){
     top: 35%;
     right: 10%;
+}
+
+
+@media (max-width: 767px){
+    #intro {
+        flex-direction: column;
+    }
+
+    #intro .introContent {
+        height: 300px;
+        width: 95%;
+    }
+
+    #intro .introContent .TextContent p span:nth-child(1){
+        font-size: 3rem;
+    }
+
+    #intro .introContent .TextContent p span:nth-child(2){
+        font-size: 2rem;
+    }
+
+    #intro .introContent .TextContent p span:nth-child(3){
+        font-size: 2rem;
+    }
+
+    #intro .introContent .TextContent p span:nth-child(4){
+        font-size: 1.1rem;
+    }
+
+    #intro .introContent .TextContent p span:nth-child(5){
+        font-size: 0.8rem;
+    }
+
+    #intro .introContent .TextContent #btns {
+        height: 30px;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    #intro .introContent .TextContent #btns span {
+        font-size: 1rem;
+    }
+
+    #intro .introContent .TextContent #btns a {
+        height: 25px;
+        font-size: 1rem;
+    }
+
+    #intro .img {
+        height: 300px;
+        width: 90%;
+    }
+
+    #icons img:nth-child(1){
+        height: 8%;
+    }
 }
 
 /*About Section styles*/
@@ -775,128 +870,126 @@ header nav ul li:hover {
 
 
 
-/*Contact Section Styles*/
+/*Contact Section Styles Responsive Done*/
 
 #contact {
-    height: 400px;
+    height: auto;
     width: 100vw;
-    background-color: rgb(57, 3, 91);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-}
-
-#message {
-    background-color: rgba(255, 255, 255, 0.229);
-    backdrop-filter: blur(5px);
-    width: 94%;
-    height: 90%;
-    border-radius: 10px;
-    border: 2px solid white;
+    background: rgb(57, 3, 91);
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#message h3 {
-    background-color: rgb(57, 3, 91);
-    border: 2px solid white;
-    border-top: none;
-    border-left: none;
-    color: white;
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 1% 2%;
-    letter-spacing: 2px;
-    word-spacing: 5px;
-    border-radius: 0 0 5px 5px;
-    position: absolute;
-    top: -0.5%;
-    left: 0;
-}
-
-#message .msgContent {
-    height: 90%;
-    width: 90%;
-    display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
+    padding: 5% 10% 5% 10%;
 }
 
-#message .msgContent div {
-    height: 90%;
+#contact h3 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: default;
+    z-index: 2;
+    margin-left: 5vw;
+}
+
+#contact h3::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+}
+         
+#TakeInput {
+    height: 350px;
     width: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    margin-top: 5%;
-}
-
-#message .msgContent div input {
-    height: 15%;
-    width: 100%;
-    border: none;
-    background-color: rgb(57, 3, 91);
-    color: white;
-    font-size: 1.5rem;
+    border: 2px solid white;
     border-radius: 5px;
-    outline: none;
-    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.247);
+    backdrop-filter: blur(5px);
+    margin-top: 20px;
 }
 
-#message .msgContent div textarea {
+#TakeInput input[type="text"]{
+    height: 10%;
+    width: 80%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    padding: 0 5px;
+    outline: none;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#TakeInput textarea {
     resize: none;
-    height: 50%;
-    width: 100%;
-    background: rgb(57, 3, 91);
-    font-size: 1.3rem;
+    height: 60%;
+    width: 95%;
+    border-radius: 5px;
+    background-color: rgba(57, 3, 91, 0.318);
+    border: 2px solid black;
     padding: 5px;
     outline: none;
-    border: none;
     color: white;
-    border-radius: 5px;
 }
 
-#message .msgContent div .button {
-    height: 20%;
-    width: 50%;
-    background-color: rgb(57, 3, 91);
-    border-radius: 5px;
-}
-
-#message .msgContent div .button button {
-    all: initial;
-    height: 75%;
-    width: 92%;
-    text-transform: uppercase;
-    background-color: rgba(255, 255, 255, 0.229);
-    backdrop-filter: blur(5px);
-    text-align: center;
-    align-content: center;
-    font-size: 2rem;
-    letter-spacing: 3px;
-    border: 1px solid white;
-    border-radius: 3px;
-    cursor: pointer;
+::placeholder {
+    font-size: 1rem;
     color: #222222;
-    transition: all 0.5s;
-    font-weight: bold;
 }
 
-#message .msgContent div .button button:hover {
-    color: black;
-    background-color: rgba(255, 255, 255, 0.348);
-    letter-spacing: 8px;
-    transition: all 0.5s;
+#TakeInput button {
+    height: 15%;
+    width: 95%;
+    border-radius: 5px;
+    border: 2px solid rgb(57, 3, 91);
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    background: rgba(57, 3, 91, 0.607);
+    color: white;
 }
 
-#message .msgContent img {
-    height: 70%;
+#contact img {
+    height: 300px;
 }
 
+@media (max-width: 767px){
+    #contact {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #TakeInput {
+        height: 300px;
+        width: 80%;
+        margin-top: 20%;
+    }
+
+    #contact h3 {
+        font-size: 1.8rem;
+        margin-left: 1vw;
+    }
+
+    #TakeInput input[type="text"]{
+        font-size: 1rem;
+    }
+
+    #contact img {
+        height: 400px;
+    }
+}
 
 
 /*Connect Section Responsive Done*/
@@ -912,7 +1005,6 @@ header nav ul li:hover {
 
 #connect #Conn-A,
 #connect #Conn-B {
-    /* background-color: red; */
     width: 50vw;
 }
 
@@ -929,19 +1021,32 @@ header nav ul li:hover {
     background-color: rgba(255, 255, 255, 0.325);
     backdrop-filter: blur(5px);
     border-radius: 5px;
-    border: 2px solid white;
+    border: 2px solid rgb(213, 204, 204);
     padding: 5px 0;
     color: #111111;
     letter-spacing: 2px;
     font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#connect #Conn-A a:hover,
+#connect #Conn-B a:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s;
+    border-color: white;
 }
 
 #connect #Conn-A a img,
 #connect #Conn-B a img {
     height: 50px;
     width: 50px;
-    background-color: blue;
     margin-right: 5%;
+}
+
+#connect #Conn-A a p,
+#connect #Conn-B a p {
+    text-decoration: underline;
 }
 
 
@@ -993,12 +1098,12 @@ footer .copyRight {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    color: white;
+    color: #dfd4d4;
 }
 
 footer .phone,
 footer .mail {
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(92, 28, 195, 0.35);
     backdrop-filter: blur(5px);
     transition: all 0.3s;
     cursor: pointer;
@@ -1007,13 +1112,18 @@ footer .mail {
     border-radius: 5px;
     margin-bottom: 20px;
     height: 40px;
+    padding: 5px 10px;
+    border: 2px solid rgb(152, 134, 134);
+    font-weight: 400;
 }
 
 footer .phone:hover,
 footer .mail:hover {
     transform: translateY(-5px);
     transition: all 0.5s;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(224, 210, 210, 0.5);
+    color: #222222;
+    letter-spacing: 1px;
 }
 
 footer .copyRight {
