@@ -359,7 +359,7 @@ header nav ul li:hover {
 #about-1,
 #about-2,
 #about-3 {
-    height: 500px;
+    height: 600px;
     width: 100vw;
     background-color: var(--BG-Color);
     border-top: 3px solid white;
@@ -368,7 +368,7 @@ header nav ul li:hover {
 #about-1 h2 {
     background: rgba(245, 245, 245, 0.231);
     backdrop-filter: blur(5px);
-    font-size: 4rem;
+    font-size: 2.5rem;
     display: inline-block;
     padding: 15px;
     border: 1px solid white;
@@ -446,10 +446,65 @@ header nav ul li:hover {
 }
 
 
+@media (max-width: 767px){
+    #about-1 h2 {
+        font-size: 2rem;
+    }
+
+    #about-1 {
+        height: 600px;
+    }
+
+    #about-2,
+    #about-3 {
+        height: 500px;
+    }
+
+    .AboutContent h3 {
+        font-size: 1.5rem;
+    }  
+    
+    .AboutContent div {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .AboutContent div p {
+        border: none;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .AboutContent div p span {
+        font-size: 1.1rem;
+    }
+
+    .AboutContent div p:nth-child(1),
+    .AboutContent div p:nth-child(2) {
+        border: none;
+    }
+
+    .AboutContent div img {
+        height: 80%;
+    }
+
+    #about-2 .AboutContent,
+    #about-3 .AboutContent {
+        height: 90%;
+        width: 90%;
+    }
+
+    #about-1 .AboutContent {
+        height: 75%;
+        width: 90%;
+        margin-top: 5%;
+    }
+}
+
 /*Skills section styles*/
 
 #skills {
-    height: 700px;
+    height: auto;
     width: 100vw;
     background: linear-gradient(to bottom, var(--BG-Color), rgb(57, 3, 91));
     display: flex;
@@ -467,6 +522,7 @@ header nav ul li:hover {
     position: relative;
     border: 2px solid white;
     letter-spacing: 3px;
+    margin: 5% auto 0;
 }
 
 #skills h2::after {
@@ -490,7 +546,7 @@ header nav ul li:hover {
 }
 
 #skills .container {
-    height: 75%;
+    height: 500px;
     width: 90%;
     position: relative;
     background-color: transparent;
@@ -498,6 +554,7 @@ header nav ul li:hover {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-around;
+    margin: 0 auto 5% auto;
 }
 
 #skills .container .block {
@@ -555,7 +612,7 @@ header nav ul li:hover {
     color: black;
     letter-spacing: 3px;
     font-weight: 700;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
 }
 
 #skills .container .block:nth-child(1) span::after {
@@ -593,6 +650,31 @@ header nav ul li:hover {
 }
 #skills .container .block:nth-child(12) span::after {
     content: "React";
+}
+
+
+@media (max-width: 767px){
+    #skills .container {
+        height: auto;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    #skills .container .block {
+        height: 250px;
+        width: 250px;
+        margin-top: 100px;
+    }
+
+    #skills .container .block:nth-child(1){
+        margin-top: 50px;
+    }
+
+    #skills .container .block:last-child{
+        margin-bottom: 100px;
+    }
 }
 
 
@@ -1140,8 +1222,8 @@ footer .copyRight {
     footer .mail {
         font-size: 1rem;
         grid-column: 1/-1;
-        width: 100vw;
-        margin: 5px 0;
+        width: 90vw;
+        margin: 5px auto;
     }
 
     footer .copyRight {
