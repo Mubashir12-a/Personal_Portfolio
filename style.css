@@ -653,57 +653,35 @@ header nav ul li:hover {
     content: "React";
 }
 
-#skills button {
-    all: initial;
-    background-color: rgba(107, 0, 246, 0.307);
-    height: 50px;
-    width: 200px;
-    border-radius: 10px;
-    text-align: center;
-    align-content: center;
-    font-weight: 500;
-    letter-spacing: 2px;
-    border: 2px solid white;
-    color: white;
-    font-size: 1.3rem;
-    display: none;
-    transition: all 0.5s;
-}
-
-#skills button:hover {
-    background-color: rgba(107, 0, 246, 0.391);
-    transform: scale(0.8);
-    transition: all 0.5s;
-}
-
 
 @media (max-width: 767px){
     #skills .container {
         height: auto;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        margin-bottom: 100px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        margin-bottom: 50px;
     }
 
     #skills .container .block {
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
         margin: 0 auto;
         margin-top: 60px;
     }
 
     #skills .container .block:nth-child(1),
-    #skills .container .block:nth-child(2) {
+    #skills .container .block:nth-child(2),
+    #skills .container .block:nth-child(3) {
         margin-top: 50px;
     }
 
     #skills .container .block span::after {
-        font-size: 1.2rem;
+        font-size: 0.75rem;
     }
 
-    #skills button {
-        display: block;
+    #skills .container .block span {
+        font-size: 1.5rem;
     }
 }
 
