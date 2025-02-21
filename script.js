@@ -40,9 +40,33 @@ function SetSkillArc(i, per) {
 
 // Send Message:
 
-let BtnMsg = document.getElementById("SndMsg");
+// let BtnMsg = document.getElementById("SndMsg");
 
-BtnMsg.addEventListener('click', () => {
+// BtnMsg.addEventListener('click', () => {
    
+// })
+
+// More Btn
+
+let BtnMore = document.getElementById("More_btn");
+let block = document.getElementsByClassName("block");
+let containerSkill = document.getElementById("skills");
+
+for(let i = 4; i < 12; i++){
+    block[i].style.display = "none";
+}
+
+// containerSkill.style.height = "500px";
+
+
+
+BtnMore.addEventListener('click', () => {
+    for(let i = 4; i < 12; i++){
+        block[i].style.display = "block";
+    }
+
+    BtnMore.style.display = "none";
 })
+
+console.log("Hell")
 
