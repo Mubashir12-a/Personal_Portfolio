@@ -687,7 +687,7 @@ header nav ul li:hover {
 
 
 
-/*projects section styles*/
+/*projects section styles Responsive Done*/
 
 #projects-Sec-1 {
     height: 500px;
@@ -966,14 +966,16 @@ header nav ul li:hover {
     }
 
     #projects-Sec-1 h2 {
-        height: 30px;
-        width: 50%;
-        font-size: 1.5rem;
+        height: 40px;
+        width: 60%;
+        font-size: 1.7rem;
     }
     
     #projects-Sec-1 .container {
         height: 80%;
         width: 95%;
+        background: initial;
+        border: initial;
     }
     
     #projects-Sec-1 .container span:nth-child(1),
@@ -993,17 +995,21 @@ header nav ul li:hover {
         height: 45%;
         width: 90%;
         margin: 0 5%;
+        background: rgba(255, 255, 255, 0.244);
+        backdrop-filter: blur(5px);
+        border: 2px solid white;
+        border-radius: 10px;
     }
 
     #projects-Sec-1 .container #Container-2{
         flex-direction: column-reverse;
-        margin-top: 10%;
+        margin-top: 5%;
     }
     
     #projects-Sec-1 .container #Container-1 a,
     #projects-Sec-1 .container #Container-2 a {
         width: 80%;
-        margin: 1% 0;
+        margin: 2% 0;
         border-radius: 10px;
     }
     
@@ -1018,7 +1024,7 @@ header nav ul li:hover {
     #projects-Sec-1 .container #Container-2 p {
         height: 60%;
         width: 90%;
-        margin: 1% 1%;
+        margin: 1% 1% 2% 1%;
         font-size: 0.6rem;
     }
     
@@ -1035,120 +1041,36 @@ header nav ul li:hover {
     #projects-Sec-2 {
         height: 350px;
         width: 100vw;
-        background-color: rgb(57, 3, 91);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 5fr;
     }
     
     #projects-Sec-2 h2 {
-        grid-column: 1/ -1;
-        background-color: rgba(178, 18, 199, 0.406);
-        width: 50%;
-        margin: 5px auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        border-radius: 10px;
-        border: 2px solid red;
-        color: white;
-        letter-spacing: 3px;
+        width: 90%;
     }
     
     #projects-Sec-2 img {
-        height: 240px;
+        height: 180px;
         margin: auto;
     }
     
     #projects-Sec-2 .content {
-        height: 220px;
-        width: 80%;
-        background-color: rgba(255, 255, 255, 0.209);
-        border-radius: 10px;
-        margin: auto;
-        margin-left: 0;
-        position: relative;
-        padding: 10px;
-        overflow: hidden;
-    }
-    
-    #projects-Sec-2 .content .border {
-        position: absolute;
-        background-color: white;
-    }
-    
-    #projects-Sec-2 .content .border:nth-child(1) {
-        height: 3px;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-    
-    #projects-Sec-2 .content .border:nth-child(2) {
-        height: 3px;
-        width: 60%;
-        left: 0;
-        bottom: 0;
-    }
-    
-    #projects-Sec-2 .content .border:nth-child(3) {
-        height: 100%;
-        width: 3px;
-        left: 0;
-        top: 0;
-    }
-    
-    #projects-Sec-2 .content .border:nth-child(4) {
-        height: 80%;
-        width: 3px;
-        right: 0;
-        top: 0;
+        height: 180px;
+        width: 90%;
+        padding: 5px;
     }
     
     #projects-Sec-2 .content .bttnSpace {
-        background-color: white;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        height: 30%;
-        width: 50%;
-        border-radius: 10px;
-        background-color: rgb(57, 3, 91);
-        border-top: 3px solid white;
-        border-left: 3px solid white;
+        height: 25%;
+        width: 60%;
     }
     
     #projects-Sec-2 .content p {
-        font-size: 1.8rem;
-        color: black;
-        justify-content: center;
+        font-size: 0.85rem;
     }
     
     #projects-Sec-2 .content .bttnSpace button {
         height: 85%;
         width: 95%;
-        background-color: rgba(255, 255, 255, 0.209);
-        backdrop-filter: blur(5px);
-        margin: 2.5% 2.5%;
-        border-radius: 10px;
-        border: none;
-        font-size: 2rem;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        border: 1px solid white;
-        color: #222222;
-        cursor: pointer;
-        font-weight: bold;
-        transition: all 0.5s;
-    
-    }
-    
-    #projects-Sec-2 .content .bttnSpace button:hover {
-        background-color: rgba(255, 255, 255, 0.457);
-        color: black;
-        letter-spacing: 5px;
-        transition: all 0.5s;
+        font-size: 1.3rem;
     }
 }
 
