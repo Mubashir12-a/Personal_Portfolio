@@ -1,96 +1,97 @@
 let NavEl = document.getElementsByClassName("NavEl");
 
-NavEl[0].addEventListener("click", () => {
-    setTimeout(() => {
-        gsap.fromTo(".Cont-01",
-            {x: -1000, opacity: 0},
-            {
-                x: 0,
-                opacity: 1,
-                duration: 2,
-                ease: "elastic.out(1, 0.3)"
-            }
-        )
-    }, 500);
-})
-
-
-
-NavEl[1].addEventListener("click", () => {
-    setTimeout(() => {
-        gsap.fromTo("#skills h2", 
-            {scale: 0, opacity: 0},
-            {
-                scale: 1,
-                duration: 3,
-                opacity: 1,
-                ease: "elastic.out(2, 0.2)"
-            }
-        )
-    
-        i = 0;
-    
-        gsap.from(".container", {
-            onStart: () => {
-                Object.entries(ObjLang).forEach(([key, value]) => {
-                    SetSkillArc(i, value);
-                    i++;
-                })
-            }
-        })
-    }, 500);
-})
-
-
-NavEl[2].addEventListener("click", () => {
-    setTimeout(() => {
-        gsap.fromTo("#Container-1", 
-            { x: 1200, opacity: 0 }, // Start state
-            { 
-                x: 0,
-                duration: 3,
-                opacity: 1,
-                ease: "elastic.out(1, 0.3)"
-            }
-        );
-    
-        gsap.fromTo("#Container-2", 
-            { x: -1200, opacity: 0 }, // Start state
-            {
-                x: 0,
-                duration: 3,
-                opacity: 1,
-                ease: "elastic.out(1, 0.3)"
-            }
-        );
-    
-        gsap.fromTo("#projects-Sec-1 h2", 
-            { scale: 0, opacity: 0 }, // Start state
-            {
-                scale: 1,
-                duration: 3,
-                opacity: 1,
-                ease: "elastic.out(2, 0.2)"
-            }
-        );
-    }, 500);
-})
-
-NavEl[4].addEventListener('click', () => {
-   setTimeout(() => {
-    gsap.fromTo("#message",
-        {y: 300, opacity: 0},
-        {
-        y: 0,
-        duration: 3,
-        opacity: 1,
-        ease: "elastic.out(1, 0.3)"
-    })
-   }, 500);
-})
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    NavEl[0].addEventListener("click", () => {
+        setTimeout(() => {
+            gsap.fromTo(".Cont-01",
+                {x: -1000, opacity: 0},
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 2,
+                    ease: "elastic.out(1, 0.3)"
+                }
+            )
+        }, 500);
+    })
+    
+    
+    
+    NavEl[1].addEventListener("click", () => {
+        setTimeout(() => {
+            gsap.fromTo("#skills h2", 
+                {scale: 0, opacity: 0},
+                {
+                    scale: 1,
+                    duration: 3,
+                    opacity: 1,
+                    ease: "elastic.out(2, 0.2)"
+                }
+            )
+        
+            i = 0;
+        
+            gsap.from(".container", {
+                onStart: () => {
+                    Object.entries(ObjLang).forEach(([key, value]) => {
+                        SetSkillArc(i, value);
+                        i++;
+                    })
+                }
+            })
+        }, 500);
+    })
+    
+    
+    NavEl[2].addEventListener("click", () => {
+        setTimeout(() => {
+            gsap.fromTo("#Container-1", 
+                { x: 1200, opacity: 0 }, // Start state
+                { 
+                    x: 0,
+                    duration: 3,
+                    opacity: 1,
+                    ease: "elastic.out(1, 0.3)"
+                }
+            );
+        
+            gsap.fromTo("#Container-2", 
+                { x: -1200, opacity: 0 }, // Start state
+                {
+                    x: 0,
+                    duration: 3,
+                    opacity: 1,
+                    ease: "elastic.out(1, 0.3)"
+                }
+            );
+        
+            gsap.fromTo("#projects-Sec-1 h2", 
+                { scale: 0, opacity: 0 }, // Start state
+                {
+                    scale: 1,
+                    duration: 3,
+                    opacity: 1,
+                    ease: "elastic.out(2, 0.2)"
+                }
+            );
+        }, 500);
+    })
+    
+    NavEl[4].addEventListener('click', () => {
+       setTimeout(() => {
+        gsap.fromTo("#message",
+            {y: 300, opacity: 0},
+            {
+            y: 0,
+            duration: 3,
+            opacity: 1,
+            ease: "elastic.out(1, 0.3)"
+        })
+       }, 500);
+    })
+    
     let timeLn = gsap.timeline();
 
     timeLn.from("#title", {
@@ -274,19 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
             start: "top 70%"
         }
     })
-
-    gsap.from("#message", {
-        y: 300,
-        duration: 2,
-        opacity: 0,
-        ease: "elastic.out(1, 0.3)",
-        scrollTrigger: {
-            trigger: "#message",
-            start: "top 80%"
-        }
-    })
-
-
 })
+
 
 

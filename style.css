@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    max-width: 100%;
 }
 
 :root {
@@ -24,6 +25,7 @@ html {
 body {
     width: 100vw;
     height: auto;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -815,7 +817,7 @@ header nav ul li:hover {
     border-radius: 10px;
     color: white;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
     word-spacing: 3px;
     text-align: justify;
