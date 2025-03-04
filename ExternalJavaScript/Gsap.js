@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
        }, 500);
     })
-    
+
     let timeLn = gsap.timeline();
 
     timeLn.from("#title", {
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     timeLn.from(".Al", {
         duration: 1,
-        y: -300,  // From the left
+        y: -300, 
         opacity: 0,
         stagger: 0.3,
     })
@@ -275,6 +275,47 @@ document.addEventListener("DOMContentLoaded", () => {
             start: "top 70%"
         }
     })
+
+    gsap.from('#TakeInput', {
+        y: 300,
+        duration: 1,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "#TakeInput",
+            start: "top 80%"
+        }
+    })
+    
+    gsap.from('#feedBackImg', {
+        y: 300,
+        duration: 1,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "#feedBackImg",
+            start: "top 80%"
+        }
+    })
+
+    gsap.from('#Conn-A', {
+        x: -500,
+        duration: 2,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "#Conn-A",
+            start: "top 90%"
+        }
+    })
+
+    gsap.from('#Conn-B', {
+        x: 500,
+        duration: 1,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "#Conn-B",
+            start: "top 90%"
+        }
+    })
+    
 })
 
 

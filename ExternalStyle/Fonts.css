@@ -19,12 +19,16 @@ nav ul a li,
 }
 
 #about-1 h2,
-#btns {
+#btns,
+#TakeInput button,
+.HyperLinks p {
     font-family: "Space Grotesk", serif;
     font-weight: 500;
 }
 
-.TextContent p {
+.TextContent p,
+footer a,
+footer {
     font-family: "Dosis", serif;
 }
 
@@ -36,7 +40,8 @@ nav ul a li,
 
 #skills h2,
 #projects-Sec-1 h2,
-#projects-Sec-2 h2 {
+#projects-Sec-2 h2,
+#contact h3 {
     font-family: "Sedan SC", serif;
 }
 
@@ -46,7 +51,8 @@ nav ul a li,
 
 #Container-1 p,
 #Container-2 p,
-.content p {
+.content p,
+#TakeInput {
     font-family: "Sedan SC", serif;
     font-weight: 400;
     font-style: normal;
